@@ -1,7 +1,14 @@
 #include<iostream>
-#include<GL/gl.h>
-#include<GL/glut.h>
 #include<vector>
+#ifdef __APPLE__
+#  include <OpenGL/gl.h>
+#  include <OpenGL/glu.h>
+#  include <GLUT/glut.h>
+#else
+#  include <GL/gl.h>
+#  include <GL/glu.h>
+#  include <GL/glut.h>
+#endif
 using namespace std;
 
 class p3{
